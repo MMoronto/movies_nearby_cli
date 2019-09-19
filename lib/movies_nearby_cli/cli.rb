@@ -17,20 +17,26 @@ Class MoviesNearby::CLI
   
   def menu 
     puts "Find movies showing at a theatre near you!"
-    puts "Enter your zipcode:"
+    puts "Enter your zipcode (or type exit to end session):"
     input = gets.strip
     case  input
     when "12345"
       list_movies
     puts "Enter the number of the movie you would like to see or type exit to end session."
-    input = gets.strip
-    case input
-    when "1"
-      puts "More info on movie 1..."
-    when "2"
-      puts "More info on movie 2..."
-    when "3"
-      puts "More info on movie 3..."
+    while input != "exit"
+      input = gets.strip.downcase
+      case input
+      when "1"
+        puts "More info on movie 1..."
+      when "2"
+        puts "More info on movie 2..."
+      when "3"
+        puts "More info on movie 3..."
+      end 
     end 
+  end 
+  
+  def goodbye
+    puts "See you next time for more movie action!!!"
   end 
 end 
