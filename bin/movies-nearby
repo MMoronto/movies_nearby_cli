@@ -1,2 +1,6 @@
 #!/usr/bin/env ruby
 
+require './lib/movies_nearby_cli'
+
+MoviesNearby::CLI.new.call
+
